@@ -1,5 +1,166 @@
-$tantofaz: #1be02b;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$corDeFundo: #141414;
+$corDoTextoPrincipal: #fff;
+$corDoTextoSecundario: #aaa;
+$corDestaque: #e50914;
+
+.container-principal {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 body {
-    background-color: $tantofaz;
+    background-color: $corDeFundo;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .filme {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+
+        &__image {
+            width: 100%;
+            display: block;
+            border-radius: 4px;
+        }
+
+        &__titulo-image {
+            position: absolute;
+            bottom: 1px; 
+            left: 16px;
+            width: 220px;  
+            pointer-events: none;
+        }
+
+        &__botao--assistir {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            background-color: #e50914;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #b00710;
+            }
+        }
+    }
+
+    .info {
+        display: flex;
+        gap: 12px;
+        margin-top: 12px;
+        width: 100%;
+
+        span {
+            color: $corDoTextoSecundario;
+            font-size: 0.9rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    }
+
+    .livre {
+        display: flex;
+        align-items: center;
+        margin-top: 8px;
+
+        &__image {
+            width: 20px;
+        }
+
+        &__text {
+            color: $corDoTextoPrincipal;
+            font-size: 0.8rem;
+            margin-left: 6px;
+        }
+    }
+
+    .destaque {
+        margin-top: 20px;
+
+        &__badge {
+            background-color: $corDestaque;
+            color: #fff;
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-bottom: 4px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        &__img {
+            max-width: 28px;
+        }
+
+        &__titulo {
+            color: $corDoTextoPrincipal;
+            font-size: 1.2rem;
+            margin: 6px 0;
+        }
+
+        &__descricao {
+            color: $corDoTextoSecundario;
+            font-size: 0.9rem;
+            margin: 6px 0;
+            max-width: 600px;
+        }
+    }
+
+    .detalhes {
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color: $corDoTextoSecundario;
+
+        strong {
+            color: $corDoTextoPrincipal;
+        }
+
+        em {
+            color: #999;
+            font-style: italic;
+        }
+    }
+    
+    .container-info {
+        display: flex;
+        gap: 40px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .info-esquerda {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .detalhes {
+        min-width: 200px;
+        color: $corDoTextoSecundario;
+        font-size: 0.9rem;
+    }
 }
